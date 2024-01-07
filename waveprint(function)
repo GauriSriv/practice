@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+void waveprint(int a[3][4],int n,int m)
+{
+     for(int c=0;c<m;c++)
+    {
+        if(c%2==0)
+        {
+            for(int r=0;r<n;r++)
+            {
+                cout<<a[r][c]<<" ";
+            }
+        }
+           else{ 
+            for(int r=n-1;r>=0;r--)
+            {
+                cout<<a[r][c]<<" ";
+                
+            }
+            
+            } }
+}
+
+int main()
+{
+    int a[3][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+    int n=3;int m=4;
+    
+    
+  
+waveprint(a,n,m);
+
+   return 0;
+}
