@@ -2,7 +2,7 @@
 using namespace std;
 void rotate(int a[10][10],int n)
 {
-    //for rotating 
+    //for reversing 
     for(int r=0;r<n;r++)
     {int x=0;
     int y=n-1;
