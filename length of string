@@ -13,3 +13,5 @@ int main()
     cout<<endl;
     cout<<"total no of string is:"<<count;
 }
+//we can use the following to get length directly 
+//cout<<strlen(a)<<endl;
