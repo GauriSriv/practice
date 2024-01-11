@@ -1,0 +1,49 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+bool compare( char a[], char b[])
+{
+    int i=0;
+    int j=0;
+    int lena=strlen(a);
+    int lenb=strlen(b);
+    
+    while(i<lena and j<lenb)
+    {
+        if(a[i]!=b[j])
+        {
+            return false;
+        }
+            i++;
+            j++;
+        
+    }
+        if(a[i]!='\0' || b[j]!='\0')
+        {
+            return false;
+        }
+        else
+        {
+        return true;
+        }
+    
+    
+}
+
+int main()
+{
+char a[100];
+char b[100];
+cin.getline(a,100);
+cin.getline(b,100);
+
+if(compare(a,b)==true)
+{
+    cout<<"match"<<endl;
+}
+else
+{
+    cout<<"nt a match"<<endl;
+}
+return 0;
+}
