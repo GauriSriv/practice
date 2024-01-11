@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+void longest(char a[],int k)
+{
+    int freq[26]={0};
+    int cnt=0;
+    int i=0;
+    int length=-1;
+    
+    for(int j=0;a[j]!='\0';j++)
+    {
+        freq[a[j]-'a']++;
+        if(freq[a[j]-'a']==1)
+        {
+            cnt++;
+        }
+        
+    
+    
+    while(cnt>k)
+    {
+        freq[a[i]-'a']--;
+        if(freq[a[i]-'a']==0)
+        {
+            cnt--;
+        }
+        i++;
+    }
+    if(cnt==k)
+    {
+        length=max(length,j-i+1);
+    }
+    }
+
+cout<<"largest string length with"<<k<<"unique characters "<<length<<endl;
+}
+
+int main()
+{
+   char a[100]="abbcceddd";
+   int k=3;longest(a,k);
+   return 0;
+}
