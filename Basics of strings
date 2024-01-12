@@ -1,0 +1,33 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+    string a="gauri";
+    cout<<a<<endl;
+    
+    for(int i=0;i<a.length();i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+    
+    
+    string x = "i will do";
+    string y=" my best";
+    x+=y;
+    cout<<x;
+    
+    x= "i am the best";
+    cout<<"updated"
+    <<x<<endl;
+    
+    a="i m the best";
+    string word="the";
+    cout<<a.find(word)<<endl;
+    
+    
+    int index= a.find(word);
+    a.erase(index,word.length()+1);
+    cout<<a<<endl;
+}
