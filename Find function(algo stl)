@@ -1,0 +1,23 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main()
+{ 
+    int a[]={2,5,4,7,8};
+    int n=sizeof(a)/sizeof(int);
+    
+    int key;
+    cin>>key;
+    
+    int *ans=find(a,a+n,key)
+    int index=ans-a;
+    if(index==n)
+    {
+        cout<<"key is nt found"<<endl;
+    }
+    else
+    {
+        cout<<"key is found at:"<<index<<endl;
+    }
+    return 0;
+}
