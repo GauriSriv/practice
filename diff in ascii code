@@ -1,0 +1,53 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+void difference_pair(char a[],int n)
+{
+   
+    
+	for(int i=0;i<n;i++)
+	{
+		for(int j=i+1;j<n;j++)
+		{
+
+
+
+
+if(a[j]!='\0')
+{
+	int sum=a[j]-a[i];
+	cout<<a[i]<<sum;
+	i++;
+
+}
+else
+        {
+            // If one of the characters is a space, print it directly
+            cout << a[i];
+        }
+    }
+
+    // Print the last character
+    cout << a[n - 1];
+		}
+		
+}	
+	
+int main()
+{
+	char a[1000];
+	cin.getline(a,1000);
+
+//size 
+	int n=2;
+	while(a[n]!='\0')
+	{
+		n++;
+	}
+
+	//function
+	difference_pair(a,n);
+	return 0;
+
+}
