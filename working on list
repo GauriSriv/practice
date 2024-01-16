@@ -1,0 +1,55 @@
+#include<iostream>
+#include<list>
+using namespace std;
+template<typename T>
+int search(T a[],int n,T key)
+{
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]==key)
+        {
+            return i;
+        }
+    }
+            return n;
+        
+    }
+    
+    template<class ForwardIterator,class T>
+    
+    ForwardIterator search(ForwardIterator s,ForwardIterator e,T key)
+    {
+        while(s!=e)
+        {
+            if(*s==key)
+            {
+                return s;
+            }
+            s++;
+        }
+        return e;
+    }
+
+
+int main()
+{
+    list<int>l;
+    l.push_back(1);
+    l.push_back(3);
+    l.push_back(5);
+    l.push_back(6);
+    
+    auto it=search(l.begin(),l.end(),3);
+    
+    if(it==l.end())
+    {
+        cout<<"found"<<endl;
+        
+    }
+    else
+    {
+        cout<<*it<<endl;
+    }
+    
+    return 0;
+}
