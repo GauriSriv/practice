@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+bool isOdd(int n)
+{
+    int lsb=(n&1);
+    if(lsb==0)
+    {
+        return false;
+    }
+    return true;
+}
+
+bool checkith(int n,int i)
+{
+    int mask=(1<<i);
+    if((n&mask)>0)
+    {
+        return true;
+    }else false;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    //if(isOdd(n))
+    // {
+    //     cout<<n<<"is odd"<<endl;
+    // }
+    // else
+    // {
+    //     cout<<n<<"is even"<<endl;
+    // }
+    
+    if(checkith(n,3))
+    {
+        cout<<"3rd bit is"<<1<<endl;
+    }
+    else
+    {
+        cout<<"3rd bit is"<<0<<endl;
+    }
+    return 0;
+    
+}
