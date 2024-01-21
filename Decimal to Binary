@@ -12,10 +12,24 @@ int ans=0;
     }
     cout<<ans<<endl;
 }
+
+void dtobi(int n)     //using bitwise opertor
+{
+    int p=1;
+    int ans=0;
+    
+    while(n>0)
+    {
+        ans+=(n&1)*p;
+        p*=10;
+        n=n>>1;
+    }cout<<ans<<endl;
+}
 int main()
 {
     int n;
     cin>>n;
     dtob(n);
+    dtobi(n);
     return 0;
 }
