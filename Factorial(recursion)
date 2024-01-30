@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int fact(int n)
+{
+    //step1.Base case
+    if(n==0)
+    {
+        return 1;
+    }
+    //step2.Recurrence relation
+    
+    
+    int sans=fact(n-1);
+    
+    //find the solution
+    
+    int bans=n*fact(n-1);
+    return bans;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<fact(n)<<endl;
+    return 0;
+}
