@@ -43,11 +43,25 @@ int last_occurance(int *a,int n,int i,int key)
     int j=last_occurance(a,n,i+1,key);
     return j;
 }
+void all_occurance(int *a,int n,int i,int key)
+{
+    //base case
+    if(i==n)
+    {
+        return;
+    }
+    if(a[i]==key)
+    {
+        cout<<i<<" ";
+    }
+     all_occurance(a,n,i+1,key);
+}
 int main()
 {
     int a[]={2,5,4,2,9,2,1};
     int n=sizeof(a)/sizeof(int);
     cout<<first_occurance(a,n,0,2)<<endl;
     cout<<last_occurance(a,n,0,2)<<endl;
+    cout<<all_occurance(a,n,0,2)<<endl;
     return 0;
 }
