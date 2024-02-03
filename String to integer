@@ -1,20 +1,28 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-int sti(char *a,int n)
-{
-    if(n==0)
-    {
-        return 0 ;}
-        int digit=a[n-1]-'0';   //recursive
-        return sti(a,n-1)*10+digit;
+
+int sToi(char *a, int n) {
+    if (n == 1) {
+        return a[0] - '0';
+    }
+
+    int digit = a[n - 1] - '0';
+    int sm = sToi(a, n - 1);
+    int bi = sm * 10 + digit;
+
+    return bi;
 }
-int main()
-{
-    char a[]="23456";
-    int n=strlen(a);
-    int ans=sti(a,n);
-    cout<<ans<<endl;
-    cout<<ans+1<<endl;
+
+int main() {
+    char a[10];
+    cin >> a;
+
+    // Calculate the actual length of the input string
+    int length = strlen(a);
+
+    int ans = sToi(a, length);
+    cout << ans << endl;
+
     return 0;
 }
