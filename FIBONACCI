@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int fibo(int n)
+{
+    //1.bc
+    if(n==0||n==1)
+    {
+        return 1;
+    }
+    
+    //2.rf
+    
+    int small1=fibo(n-1);
+    int small2=fibo(n-2);
+    int big=fibo(n-1)+fibo(n-2);
+    
+    //3.find sol
+    return big;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int ans=fibo(n);
+    cout<<ans;
+    return 0;
+}
